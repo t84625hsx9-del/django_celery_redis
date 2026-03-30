@@ -1,0 +1,14 @@
+__pycache__/# Python кэш
+__pycache__/
+*.py[cod]
+*$py.class
+
+# База данных SQLite
+*.sqlite3
+
+# Окружение (если создавал venv)
+venv/
+.env
+
+# Логи Celery и системы
+*.log
