@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Детали товара: {{ product.name }}</title>
+</head>
+<body>
+    <h1>Детальная информация о товаре</h1>
+
+    <ul>
+        <li><strong>Название:</strong> {{ product.name }}</li>
+        <li><strong>Цена:</strong> {{ product.price }} руб.</li>
+        <li><strong>Описание:</strong> {{ product.description|default:"Описание отсутствует" }}</li>
+        <li><strong>Дата добавления:</strong> {{ product.created_at|date:"d.M.Y в H:i" }}</li>
+    </ul>
+
+    <hr>
+    <!-- Ссылки для управления прямо со страницы товара -->
+    <a href="{% url 'product_update' product.pk %}">Редактировать</a> | 
+    <a href="{% url 'product_delete' product.pk %}" style="color: red;">Удалить товар</a> | 
+    <br><br>
+    <a href="{% url 'list' %}">← Вернуться к списку</a>
+</body>
+</html>

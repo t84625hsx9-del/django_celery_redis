@@ -1,0 +1,7 @@
+<h1>Удалить "{{ object.name }}"?</h1>
+<form method="post">
+    {% csrf_token %}
+    <p>Вы уверены, что хотите безвозвратно удалить этот товар?</p>
+    <button type="submit" style="background-color: red; color: white;">Да, удалить</button>
+    <a href="{% url 'list' %}">Нет, назад</a>
+</form>
