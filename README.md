@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6b6d1ab (финальные правки перед сдачей)
 ### 1. Клонируйте репозиторий
 ```bash
 git clone https://github.com
@@ -22,7 +25,4 @@ python3 -m celery -A myproject worker --loglevel=info
 
 ### 5. Протестируйте задачу (создайте ещё одно окно терминала) 
 ```bash
-python3 manage.py shell
-from products.tasks import log_new_product
-log_new_product.delay("MacBook Pro M3")
-``` 
+python3 manage.py runserver
